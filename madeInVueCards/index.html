@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css' />
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Dosis:400,500,600,700,800');
+
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Dosis, sans-serif;
+      font-size: 16px;
+      line-height: 1.42857143;
+      color: #435b71;
+      background-color: #f8f8f8;
+    }
+
+    .brick {
+      height: 457.516px;
+      position: relative;
+      min-height: 1px;
+      padding-left: 25px;
+      padding-right: 25px;
+      width: 463.328px;
+    }
+
+    .brick__inner {
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #fff;
+      width: 100%;
+      -webkit-transition: all .2s ease-out;
+      transition: all .2s ease-out;
+      -webkit-box-shadow: 0 2px 43px -4px rgba(0, 0, 0, .19);
+      box-shadow: 0 2px 43px -4px rgba(0, 0, 0, .19);
+    }
+
+    .brick__inner:hover {
+      transform: translateY(2px);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px, rgba(0, 0, 0, 0.05) 0px 1px 2px;
+    }
+
+    .brick__image {
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      padding-top: 66.17647059%;
+    }
+
+    .brick__image-inner {
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
+      background-size: 100% auto;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    .brick__caption-upper {
+      padding: 19px 20px 13px;
+      min-height: 110px;
+    }
+
+    .brick__title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 27px;
+      color: #435b71;
+      display: inline-block;
+      margin-bottom: 7px;
+    }
+
+    .brick__tagline {
+      display: block;
+      font-size: 16px;
+      line-height: 22px;
+      color: rgb(67, 91, 113);
+    }
+
+    .brick__caption-lower {
+      border-top: 1px solid rgba(67, 91, 113, .1);
+      padding: 11px 20px 13px;
+    }
+
+    .brick__caption-lower a {
+      font-size: 12px;
+      line-height: 12px;
+      color: rgba(67, 91, 113, .5);
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    a {
+      color: #293948;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    .brick__views {
+      font-size: 12px;
+      font-weight: 700;
+      color: #435b71;
+      line-height: 12px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .brick__views svg {
+      margin-right: 2px;
+    }
+
+    .u__va--middle {
+      vertical-align: middle;
+    }
+
+    *,
+    :after,
+    :before {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .brick__caption-lower:after {
+      clear: both;
+    }
+
+    .brick__caption-lower:after,
+    .brick__caption-lower:before {
+      content: " ";
+      display: table;
+    }
+
+    .brick__container {
+      margin-left: -15px;
+      margin-right: -15px
+    }
+
+    @media (min-width: 768px) {
+      .brick {
+        position: relative;
+        min-height: 1px;
+        padding-left: 25px;
+        padding-right: 25px
+      }
+      .brick__views {
+        font-size: 14px;
+        line-height: 14px
+      }
+      .brick__container {
+        margin-left: -10px;
+        margin-right: -10px
+      }
+      .brick__caption-lower a {
+        font-size: 14px;
+        line-height: 14px
+      }
+    }
+
+
+
+    @media (min-width: 768px) and (max-width:991px) {
+      .brick:nth-child(2n+3) {
+        clear: both
+      }
+    }
+
+    @media (min-width: 992px) {
+      .brick {
+        position: relative;
+        min-height: 1px;
+        padding-left: 25px;
+        padding-right: 25px
+      }
+      .brick:nth-child(3n+4) {
+        clear: both
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="brick">
+    <div class="brick__inner">
+      <div class="brick__image">
+        <div class="brick__image-inner" style="background-image: url(https://madewithvuejs.com/uploads/05/07/flyn.jpg);"></div>
+      </div>
+      <div class="brick__caption">
+        <div class="brick__caption-upper" style="height: 110px;">
+          <a href="https://madewithvuejs.com/laravel-tenancy" class="brick__title">
+            Laravel Tenancy
+          </a>
+          <span class="brick__tagline">
+            Toolkit for Multi Tenancy in Laravel
+          </span>
+        </div>
+        <div class="brick__caption-lower">
+          <div class="pull-left">
+            <a href="">#WebApps</a>
+          </div>
+          <div class="pull-right">
+            <div class="brick__views">
+              <svg width="20px" height="13px" viewBox="0 0 20 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                class="u__va--middle">
+                <title>icon-eye-dark</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Icons" transform="translate(-313.000000, -230.000000)" fill-rule="nonzero" fill="#435B71">
+                    <g id="icon-eye-dark" transform="translate(313.000000, 230.000000)">
+                      <path d="M9.57827924,0.0932647368 C5.40166592,0.0977121053 2.23909537,3.28527789 0.162366374,6.09013053 C-0.0164829778,6.33193046 -0.0164829778,6.66216481 0.162366374,6.90396474 C2.23923803,9.71401737 5.40085034,12.9011726 9.57827924,12.9068174 C9.57872397,12.9068178 9.57916871,12.9068178 9.57961345,12.9068174 C13.7562192,12.90237 16.9187977,9.71477 18.9955264,6.90995158 C19.1743758,6.66815165 19.1743758,6.3379173 18.9955264,6.09611737 C16.9186536,3.28603053 13.7570499,0.0989094737 9.57961345,0.0932647368 C9.57916871,0.0932643033 9.57872397,0.0932643033 9.57827924,0.0932647368 L9.57827924,0.0932647368 Z M9.57827924,1.46168579 L9.57961345,1.46168579 C12.8675916,1.46681737 15.5988249,3.96846211 17.5569468,6.50236737 C15.5985806,9.03230421 12.8660264,11.5341884 9.57961345,11.5383963 C6.29104758,11.5339489 3.55933568,9.03192789 1.60094367,6.49771474 C3.55930832,3.96777789 6.29185563,1.46589368 9.57827718,1.46168579 L9.57827924,1.46168579 Z"
+                        id="Shape"></path>
+                      <path d="M9.57894737,3.42075158 C7.88659608,3.42075158 6.5,4.80737263 6.5,6.49969895 C6.5,8.19205947 7.88659608,9.57864632 9.57894737,9.57864632 C11.2712987,9.57864632 12.6578947,8.19205947 12.6578947,6.49969895 C12.6578947,4.80737263 11.2712987,3.42075158 9.57894737,3.42075158 Z M9.57894737,4.78917263 C10.5317492,4.78917263 11.2894737,5.54690158 11.2894737,6.49969895 C11.2894737,7.45249632 10.5317492,8.21022526 9.57894737,8.21022526 C8.62614555,8.21022526 7.86842105,7.45249632 7.86842105,6.49969895 C7.86842105,5.54690158 8.62614555,4.78917263 9.57894737,4.78917263 Z"
+                        id="Shape"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <span class="u__va--middle">62</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brick">
+    <div class="brick__inner">
+      <div class="brick__image">
+        <div class="brick__image-inner" style="background-image: url(https://madewithvuejs.com/uploads/05/07/flyn.jpg);"></div>
+      </div>
+      <div class="brick__caption">
+        <div class="brick__caption-upper" style="height: 110px;">
+          <a href="https://madewithvuejs.com/laravel-tenancy" class="brick__title">
+            Laravel Tenancy
+          </a>
+          <span class="brick__tagline">
+            Toolkit for Multi Tenancy in Laravel
+          </span>
+        </div>
+        <div class="brick__caption-lower">
+          <div class="pull-left">
+            <a href="">#WebApps</a>
+          </div>
+          <div class="pull-right">
+            <div class="brick__views">
+              <svg width="20px" height="13px" viewBox="0 0 20 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                class="u__va--middle">
+                <title>icon-eye-dark</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Icons" transform="translate(-313.000000, -230.000000)" fill-rule="nonzero" fill="#435B71">
+                    <g id="icon-eye-dark" transform="translate(313.000000, 230.000000)">
+                      <path d="M9.57827924,0.0932647368 C5.40166592,0.0977121053 2.23909537,3.28527789 0.162366374,6.09013053 C-0.0164829778,6.33193046 -0.0164829778,6.66216481 0.162366374,6.90396474 C2.23923803,9.71401737 5.40085034,12.9011726 9.57827924,12.9068174 C9.57872397,12.9068178 9.57916871,12.9068178 9.57961345,12.9068174 C13.7562192,12.90237 16.9187977,9.71477 18.9955264,6.90995158 C19.1743758,6.66815165 19.1743758,6.3379173 18.9955264,6.09611737 C16.9186536,3.28603053 13.7570499,0.0989094737 9.57961345,0.0932647368 C9.57916871,0.0932643033 9.57872397,0.0932643033 9.57827924,0.0932647368 L9.57827924,0.0932647368 Z M9.57827924,1.46168579 L9.57961345,1.46168579 C12.8675916,1.46681737 15.5988249,3.96846211 17.5569468,6.50236737 C15.5985806,9.03230421 12.8660264,11.5341884 9.57961345,11.5383963 C6.29104758,11.5339489 3.55933568,9.03192789 1.60094367,6.49771474 C3.55930832,3.96777789 6.29185563,1.46589368 9.57827718,1.46168579 L9.57827924,1.46168579 Z"
+                        id="Shape"></path>
+                      <path d="M9.57894737,3.42075158 C7.88659608,3.42075158 6.5,4.80737263 6.5,6.49969895 C6.5,8.19205947 7.88659608,9.57864632 9.57894737,9.57864632 C11.2712987,9.57864632 12.6578947,8.19205947 12.6578947,6.49969895 C12.6578947,4.80737263 11.2712987,3.42075158 9.57894737,3.42075158 Z M9.57894737,4.78917263 C10.5317492,4.78917263 11.2894737,5.54690158 11.2894737,6.49969895 C11.2894737,7.45249632 10.5317492,8.21022526 9.57894737,8.21022526 C8.62614555,8.21022526 7.86842105,7.45249632 7.86842105,6.49969895 C7.86842105,5.54690158 8.62614555,4.78917263 9.57894737,4.78917263 Z"
+                        id="Shape"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <span class="u__va--middle">62</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brick">
+    <div class="brick__inner">
+      <div class="brick__image">
+        <div class="brick__image-inner" style="background-image: url(https://madewithvuejs.com/uploads/05/07/flyn.jpg);"></div>
+      </div>
+      <div class="brick__caption">
+        <div class="brick__caption-upper" style="height: 110px;">
+          <a href="https://madewithvuejs.com/laravel-tenancy" class="brick__title">
+            Laravel Tenancy
+          </a>
+          <span class="brick__tagline">
+            Toolkit for Multi Tenancy in Laravel
+          </span>
+        </div>
+        <div class="brick__caption-lower">
+          <div class="pull-left">
+            <a href="">#WebApps</a>
+          </div>
+          <div class="pull-right">
+            <div class="brick__views">
+              <svg width="20px" height="13px" viewBox="0 0 20 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                class="u__va--middle">
+                <title>icon-eye-dark</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Icons" transform="translate(-313.000000, -230.000000)" fill-rule="nonzero" fill="#435B71">
+                    <g id="icon-eye-dark" transform="translate(313.000000, 230.000000)">
+                      <path d="M9.57827924,0.0932647368 C5.40166592,0.0977121053 2.23909537,3.28527789 0.162366374,6.09013053 C-0.0164829778,6.33193046 -0.0164829778,6.66216481 0.162366374,6.90396474 C2.23923803,9.71401737 5.40085034,12.9011726 9.57827924,12.9068174 C9.57872397,12.9068178 9.57916871,12.9068178 9.57961345,12.9068174 C13.7562192,12.90237 16.9187977,9.71477 18.9955264,6.90995158 C19.1743758,6.66815165 19.1743758,6.3379173 18.9955264,6.09611737 C16.9186536,3.28603053 13.7570499,0.0989094737 9.57961345,0.0932647368 C9.57916871,0.0932643033 9.57872397,0.0932643033 9.57827924,0.0932647368 L9.57827924,0.0932647368 Z M9.57827924,1.46168579 L9.57961345,1.46168579 C12.8675916,1.46681737 15.5988249,3.96846211 17.5569468,6.50236737 C15.5985806,9.03230421 12.8660264,11.5341884 9.57961345,11.5383963 C6.29104758,11.5339489 3.55933568,9.03192789 1.60094367,6.49771474 C3.55930832,3.96777789 6.29185563,1.46589368 9.57827718,1.46168579 L9.57827924,1.46168579 Z"
+                        id="Shape"></path>
+                      <path d="M9.57894737,3.42075158 C7.88659608,3.42075158 6.5,4.80737263 6.5,6.49969895 C6.5,8.19205947 7.88659608,9.57864632 9.57894737,9.57864632 C11.2712987,9.57864632 12.6578947,8.19205947 12.6578947,6.49969895 C12.6578947,4.80737263 11.2712987,3.42075158 9.57894737,3.42075158 Z M9.57894737,4.78917263 C10.5317492,4.78917263 11.2894737,5.54690158 11.2894737,6.49969895 C11.2894737,7.45249632 10.5317492,8.21022526 9.57894737,8.21022526 C8.62614555,8.21022526 7.86842105,7.45249632 7.86842105,6.49969895 C7.86842105,5.54690158 8.62614555,4.78917263 9.57894737,4.78917263 Z"
+                        id="Shape"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <span class="u__va--middle">62</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
